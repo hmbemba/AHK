@@ -1,0 +1,139 @@
+#NoEnv ; Recommended for performance and compatibility with future AutoHotkey releases.
+; #Warn  ; Enable warnings to assist with detecting common errors.
+SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
+#SingleInstance Force
+#Include %A_ScriptDir%\String.ahk
+
+str := _String
+
+class _Path{
+
+  isValidPathBool(path){
+    if (FileExist(path) != ""){
+      return True
+    }
+
+    Return False
+
+  }
+
+  isValidPathOrError(path){
+    try
+    {
+      if (this.isValidPathBool(path) == False){
+        throw
+      }
+    }
+    catch e
+    {
+      err := path "is not a valid Path"
+      MsgBox % err
+      Exit
+    }
+
+  }
+
+  isFileBool(path){
+
+    if (FileExist(path) == "A"){
+      return True
+    }
+
+    Return False
+
+  }
+
+    isFileOrError(path){
+    try
+    {
+      if (this.isFileBool(path) == 0){
+        throw
+      }
+    }
+    catch e
+    {
+      err := path "is not a valid File Path"
+      MsgBox % err
+      Exit
+    }
+
+  }
+
+  isFolderBool(path){
+    if (FileExist(path) == "D"){
+      return True
+    }
+
+    Return False
+
+  }
+
+  split(path){
+
+    ;~ for index, element in p.split("C:\Users\eiowie")
+    ;~ {
+
+    ;~ MsgBox % element
+    ;~ }
+
+    SplitPath, path , OutFileName, OutDir, OutExtension, OutNameNoExt, OutDrive
+    components := [OutFileName, OutDir, OutExtension, OutNameNoExt, OutDrive]
+    return components
+
+  }
+
+  getExt(path){
+
+    this.isFileOrError(path)
+
+    SplitPath, path , OutFileName, OutDir, OutExtension, OutNameNoExt, OutDrive
+    return OutExtension
+
+  }
+
+  getFileName(path){
+
+    this.isFileOrError(path)
+
+    SplitPath, path , OutFileName, OutDir, OutExtension, OutNameNoExt, OutDrive
+    return OutFileName
+
+  }
+
+  getFileStem(path){
+
+    this.isFileOrError(path)
+
+    SplitPath, path , OutFileName, OutDir, OutExtension, OutNameNoExt, OutDrive
+    return OutNameNoExt
+
+  }
+
+  getParent(path){
+
+    this.isValidPathOrError(path)
+
+    SplitPath, path , OutFileName, OutDir, OutExtension, OutNameNoExt, OutDrive
+    return OutDir
+
+  }
+
+  getTopLevelDrive(path){
+
+    this.isValidPathOrError(path)
+
+    SplitPath, path , OutFileName, OutDir, OutExtension, OutNameNoExt, OutDrive
+    return OutDrive
+
+  }
+
+  ;printPathComponents
+
+
+}
+
+p := _Path
+MsgBox % p.getTopLevelDrive("C:\Users\hmbem\Desktop\test_newffmpeg2.mp4")
+
+
