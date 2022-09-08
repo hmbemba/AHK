@@ -11,6 +11,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :c*:Controledd::Controlled
 :c*:positie::positive
 :c*:vety::very
+:c*:ur::your
 :c*:timeing::timing
 :c*:wrie::wire
 :c*:Aruino::Arduino
