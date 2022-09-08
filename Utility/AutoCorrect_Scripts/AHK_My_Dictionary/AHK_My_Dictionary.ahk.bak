@@ -11,6 +11,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :c*:Controledd::Controlled
 :c*:positie::positive
 :c*:vety::very
+:c*:geneate::generate
+:c*:w/::with
+:c*:alos::also
+:c*:indvidual::individual
 :c*:ur::your
 :c*:timeing::timing
 :c*:wrie::wire
