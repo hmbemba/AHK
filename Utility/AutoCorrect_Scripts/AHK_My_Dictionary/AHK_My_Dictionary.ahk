@@ -6,6 +6,17 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance Force
 
 :r0*://hs:::c*: `:`:{left 2}{BackSpace}
+:c*:waterproffing::waterproofing
+:c*:categroeis::categories
+:c*:Controledd::Controlled
+:c*:positie::positive
+:c*:vety::very
+:c*:timeing::timing
+:c*:wrie::wire
+:c*:Aruino::Arduino
+:c*:interuppets::interrupts
+:c*:deploymnet::deployment
+:c*:specifcy::specify
 :c*:independantly::independently
 :c:tot::to t
 :c*:Meximum::Maximum
