@@ -8,6 +8,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :r0*://hs:::c*: `:`:{left 2}{BackSpace}
 :c*:waterproffing::waterproofing
 :c*:categroeis::categories
+:c*:aduio::audio
+:c*:leanr::learn
+:c*:hwo::how
 :c*:Hitsory::History
 :c*:Puprpose::Purpose
 :c*:Controledd::Controlled
