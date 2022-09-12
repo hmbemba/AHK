@@ -9,8 +9,24 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :c*:waterproffing::waterproofing
 :c*:categroeis::categories
 :c*:aduio::audio
+:c*:illustartes::illustrates
+:c*:permannet::permanent
+:c*:permannt::permanent
 :c*:leanr::learn
+:c:i::I
+:c*:socnd::second
+:c*:alot::a lot
+:c*:gunna::going to
 :c*:hwo::how
+:c*:eafly::early
+:c*:implmeneted::implemented
+:c*:univesal::universal
+:c*:toa::to a
+:c*:collge::college
+:c*:tthat::that
+:c:im::I'm
+:c*:maye::maybe
+:c*:misisng::missing
 :c*:Hitsory::History
 :c*:Puprpose::Purpose
 :c*:Controledd::Controlled
@@ -299,7 +315,30 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 :c*:comapnes::companies
 
+:c*:fnetic::frenetic
+
+:c:fom::from
+
+:c*:spekaing::speaking
+:c*:hto::hot
 
 
-
-
+:c*:dont::don't
+:c*:Differcnece::Difference
+:c*:anywherw::anywhere
+:c*:remeber::remember
+:c*:yoru::your
+:c*:arent::aren't
+:c*:thats::that's
+:c*:gtes::gets
+:c*:ppl::people
+:c*:decnetralization::decentralization
+:c*:esnure::ensure
+:c*:aidrop::airdrop
+:c*:farmking::farming
+:c*:communituies::communities
+:c*:Everyoen::Everyone
+:c*:acheiev::achieve
+:c*:eveolotuion::evolution
+:c*:ocmbine::combine
+:c*:starup::startup
