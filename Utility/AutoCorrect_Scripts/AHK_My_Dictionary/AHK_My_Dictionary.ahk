@@ -342,3 +342,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :c*:eveolotuion::evolution
 :c*:ocmbine::combine
 :c*:starup::startup
+:c*:Bobact::Bobcat
+:c*:concreet::concrete
+:c*:wat::what
+:c:metavers::metaverse
+:c*:exactlly::exactly
+:c*:decentralzied::decentralized
+:c*:introuce::introduce
+:c*:concpet::concept
+:c*:completley::completely
+:c*:constiturion::constitution
+:c*:netwrok::network
