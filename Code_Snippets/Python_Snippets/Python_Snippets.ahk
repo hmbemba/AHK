@@ -22,6 +22,19 @@ class App:
 Send, ^v
 return
 
+:c*://dc::
+clipboard =
+(
+from dataclasses import dataclass, field
+from typing import Any, List
+
+@dataclass
+class xx:
+    _: List = field(default_factory=lambda: [])
+)
+Send, ^v
+return
+
 :c*://defs::
 clipboard =
 (

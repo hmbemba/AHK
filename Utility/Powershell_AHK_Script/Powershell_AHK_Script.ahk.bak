@@ -9,7 +9,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 return
 
 !Space::
-run, "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
-;C:\Users\hmbem\Desktop\Tasks\WebDev\Temporary Projects\python\xonsh\venv\Scripts\xonsh.exe
+;run, "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
+run, wt.exe
 return
 
