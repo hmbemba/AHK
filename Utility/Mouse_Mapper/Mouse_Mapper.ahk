@@ -27,6 +27,15 @@ if (A_ComputerName == "LAPTOP-UAROB6VC")
 if (A_ComputerName == "DESKTOP-I5FROLF")
 {
 
+	leftScreenX = 900
+	leftScreenY = 530
+
+	middleScreenX = 2800
+	middleScreenY = 530
+
+	rightScreenX = 4600
+	rightScreenY = 200
+
 	oneCommanderPath = "C:\Users\Harrison\Desktop\OneCommander\OneCommander.exe"
 	venusPath = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\UtechSmart\Venus wireless\Venus Wireless Gaming Mouse.lnk"
 
@@ -193,9 +202,14 @@ IF NMB = 1
 NMB =
 Return
 
-;9 is alt + space which opes terminal
+;9 is alt + space which opens terminal
+!Space::
+run, wt.exe
+return
 
 
+
+; Ctrl + Numpad0 is mapped to button #10 on the Mouse
 ^Numpad0::
 SetTimer, TMButton10, -500
 NMB++ ;counts the MButton clicks

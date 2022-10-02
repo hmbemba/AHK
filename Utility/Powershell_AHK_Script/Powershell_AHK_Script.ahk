@@ -8,8 +8,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*:/ps::powershell.exe
 return
 
-!Space::
-;run, "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
-run, wt.exe
-return
+; !Space::
+; ;run, "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
+; run, wt.exe
+; return
 
