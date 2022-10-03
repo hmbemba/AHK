@@ -3290,7 +3290,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::ouevre::oeuvre
 ::fo::of
 :C:fo::of
-:C:od::of
+;:C:od::of
 ::ofits::of its
 ::ofthe::of the
 ::oft he::of the ; Could be legitimate in poetry, but more usually a typo.

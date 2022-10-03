@@ -212,7 +212,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :C*:compatiable::compatible
 
 :C*:eyour::your
-:C*:od::of
+;:C*:od::of
 :C*:Djnago::Django
 :C*:workw ith::work with
 
@@ -380,3 +380,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :c*:Fcators::Factors
 :c*:parantehses::parentheses
 :c:u::you
+:c*:somtheing::something
+:c*:Complimnets::Compliments
+:c*:Seelect::Select
+:c*:guesisng::guessing
