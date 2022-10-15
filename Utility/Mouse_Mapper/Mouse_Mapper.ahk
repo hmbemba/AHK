@@ -203,9 +203,9 @@ NMB =
 Return
 
 ;9 is alt + space which opens terminal
-!Space::
-run, wt.exe
-return
+;~ !Space::
+;~ run, wt.exe
+;~ return
 
 
 
@@ -224,6 +224,7 @@ IF NMB = 3
     ;run, %mouseMapperPath%
 	Run, powershell -NoExit -Command "code ."
 	;MsgBox, HELLO
+Return
 
 ; Ctrl + Shift + D is mapped to button #11 on the Mouse
 #IfWinActive ahk_exe FL64.exe
