@@ -64,4 +64,18 @@ if __name__ == "__main__":
 Send, ^v
 return
 
+:c*://dotenv::
+clipboard =
+(
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+#os.environ['my_nev']
+
+)
+Send, ^v
+return
+
 

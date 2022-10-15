@@ -225,7 +225,15 @@ IF NMB = 3
 	Run, powershell -NoExit -Command "code ."
 	;MsgBox, HELLO
 
+; Ctrl + Shift + D is mapped to button #11 on the Mouse
+#IfWinActive ahk_exe FL64.exe
+^+D::
+run, "C:\Users\hmbem\Desktop\Scripts\Python\Apps\FL_VST_Launcher\main.pyw"
+Return
 
+
+
+#IfWinActive
 NMB =
 Return
 
