@@ -203,9 +203,9 @@ NMB =
 Return
 
 ;9 is alt + space which opens terminal
-;~ !Space::
-;~ run, wt.exe
-;~ return
+!Space::
+run, wt.exe
+return
 
 
 
@@ -217,13 +217,15 @@ Return
 TMButton10:
 IF NMB = 1
 	Send {XButton1}
+	;MsgBox, pressed once
 	; Back Button
 IF NMB = 2
     run, %venusPath%
+	;MsgBox, pressed twice
 IF NMB = 3
-    ;run, %mouseMapperPath%
+    ;MsgBox, pressed thrice
 	Run, powershell -NoExit -Command "code ."
-	;MsgBox, HELLO
+NMB =
 Return
 
 ; Ctrl + Shift + D is mapped to button #11 on the Mouse
