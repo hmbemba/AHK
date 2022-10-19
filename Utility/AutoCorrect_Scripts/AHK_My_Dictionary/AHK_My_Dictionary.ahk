@@ -380,7 +380,17 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :c*:Fcators::Factors
 :c*:parantehses::parentheses
 :c:u::you
-:c*:somtheing::something
-:c*:Complimnets::Compliments
-:c*:Seelect::Select
-:c*:guesisng::guessing
+:c:somtheing::something
+:c:Complimnets::Compliments
+:c:Seelect::Select
+:c:guesisng::guessing
+:c:absolutley::absolutely
+:c:tink::think
+:c:alreadya::already a
+:c:evironement::environment
+:c:harshy::harshly
+:c:somehing::something
+:c:varibae::variable
+:c:fcators::factors
+:c:intoa::into a
+:c:decsiicon::desicion
