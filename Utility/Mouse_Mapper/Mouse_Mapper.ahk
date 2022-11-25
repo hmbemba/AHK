@@ -21,6 +21,8 @@ if (A_ComputerName == "LAPTOP-UAROB6VC")
 	oneCommanderPath = "C:\Users\hmbem\Desktop\OneCommander\OneCommander.exe"
 	venusPath = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\UtechSmart\Venus wireless\Venus Wireless Gaming Mouse.lnk"
 	mouseMapperPath = "C:\Users\hmbem\Desktop\Scripts\AHK\Utility\Mouse_Mapper\Mouse_Mapper.ahk"
+	FL_Launcher = "C:\Users\hmbem\Desktop\Scripts\Python\Apps\FL_VST_Launcher\main.pyw"
+
 
 }
 
@@ -38,6 +40,8 @@ if (A_ComputerName == "DESKTOP-I5FROLF")
 
 	oneCommanderPath = "C:\Users\Harrison\Desktop\OneCommander\OneCommander.exe"
 	venusPath = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\UtechSmart\Venus wireless\Venus Wireless Gaming Mouse.lnk"
+	FL_Launcher = "C:\Users\Harrison\Desktop\Scripts\Python\Apps\FL_VST_Launcher\main.pyw"
+
 
 }
 
@@ -231,7 +235,8 @@ Return
 ; Ctrl + Shift + D is mapped to button #11 on the Mouse
 #IfWinActive ahk_exe FL64.exe
 ^+D::
-run, "C:\Users\hmbem\Desktop\Scripts\Python\Apps\FL_VST_Launcher\main.pyw"
+run, %FL_Launcher% ;"C:\Users\hmbem\Desktop\Scripts\Python\Apps\FL_VST_Launcher\main.pyw"
+
 Return
 
 
