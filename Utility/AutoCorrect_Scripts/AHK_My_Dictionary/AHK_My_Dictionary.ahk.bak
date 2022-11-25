@@ -36,7 +36,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :c*:w/::with
 :c*:alos::also
 :c*:indvidual::individual
-:c*:ur::your
+:c:ur::your
 :c*:timeing::timing
 :c*:wrie::wire
 :c*:Aruino::Arduino
@@ -142,13 +142,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
 
+
 :c*:Fromating::Formating
 :c*:fromating::formating
 
 :C*:interfcae::interface
 :C*:Iterfaces::Interfaces
 
-:*:cstr::constructor
+:c0:cstr::constructor
 
 :*:soldiity::solidity
 
@@ -344,7 +345,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :c*:starup::startup
 :c*:Bobact::Bobcat
 :c*:concreet::concrete
-:c*:wat::what
+:c:wat::what
 :c:metavers::metaverse
 :c*:exactlly::exactly
 :c*:decentralzied::decentralized
@@ -380,7 +381,41 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :c*:Fcators::Factors
 :c*:parantehses::parentheses
 :c:u::you
-:c*:somtheing::something
-:c*:Complimnets::Compliments
-:c*:Seelect::Select
-:c*:guesisng::guessing
+:c:somtheing::something
+:c:Complimnets::Compliments
+:c:Seelect::Select
+:c:guesisng::guessing
+:c:absolutley::absolutely
+:c:tink::think
+:c:alreadya::already a
+:c:evironement::environment
+:c:harshy::harshly
+:c:somehing::something
+:c:varibae::variable
+:c:fcators::factors
+:c:intoa::into a
+:c:decsiicon::desicion
+:c:downlaoded::downloaded
+:c:coomputer::computer
+:c:poitn::point
+:c:uisng::using
+:c:dirnk::drink
+:c:Relatioships::Relationships
+:c:Fuctions::Functions
+:c:funcion::function
+:c:Fcatories::Factories
+:c:alphabeticaly::alphabetically
+:c:Pricinsg::Pricing
+:c:declartion::declaration
+:c:Packakge::Package
+:c:contiguosly::contiguously
+:c:Fisrt::First
+:c:youre::you're
+:c:Alaways::Always
+:c:arays::arrays
+:c:effiecient::efficient
+:c:parctice::practice
+:c:Dcelaring::Declaring
+:c:deisgned::designed
+:c:whathc::watch
+:c:Reources::Resources
