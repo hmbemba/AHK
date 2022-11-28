@@ -45,6 +45,25 @@ if (A_ComputerName == "DESKTOP-I5FROLF")
 
 }
 
+if (A_ComputerName == "TOWER2")
+{
+
+	leftScreenX = 900
+	leftScreenY = 530
+
+	middleScreenX = 2800
+	middleScreenY = 530
+
+	rightScreenX = 4600
+	rightScreenY = 200
+
+	oneCommanderPath = "C:\Users\hmbem\Desktop\OneCommander\OneCommander.exe"
+	venusPath = "C:\Program Files (x86)\UtechSmart\Venus wireless\OemDrv.exe"
+	FL_Launcher = "C:\Users\hmbem\Desktop\Scripts\Python\Apps\FL_VST_Launcher\main.pyw"
+
+
+}
+
 
 
 ^Numpad1::
@@ -245,15 +264,15 @@ Return
 
 
 !1::
-MouseMove, 3000,530
+MouseMove, 	leftScreenX, leftScreenY
 Return
 
 !2::
-MouseMove, 900,530
+MouseMove, middleScreenX,middleScreenY
 Return
 
 !3::
-MouseMove, 4500,530
+MouseMove, rightScreenX, rightScreenY
 Return
 
 

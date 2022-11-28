@@ -45,6 +45,25 @@ if (A_ComputerName == "DESKTOP-I5FROLF")
 
 }
 
+if (A_ComputerName == "TOWER2")
+{
+
+	leftScreenX = 900
+	leftScreenY = 530
+
+	middleScreenX = 2800
+	middleScreenY = 530
+
+	rightScreenX = 4600
+	rightScreenY = 200
+
+	oneCommanderPath = "C:\Users\hmbem\Desktop\OneCommander\OneCommander.exe"
+	venusPath = "C:\Program Files (x86)\UtechSmart\Venus wireless\OemDrv.exe"
+	FL_Launcher = "C:\Users\hmbem\Desktop\Scripts\Python\Apps\FL_VST_Launcher\main.pyw"
+
+
+}
+
 
 
 ^Numpad1::
@@ -115,18 +134,18 @@ IF NMB = 2
 NMB =
 Return
 
-;~ #IfWinActive
-;~ ^Numpad5::
-;~ SetTimer, TMButton5, -500
-;~ NMB++ ;counts the MButton clicks
-;~ Return
-;~ TMButton5:
-;~ IF NMB = 1
-	;~ Send #5
-	;~ ; win + 5
+#IfWinActive
+^Numpad5::
+SetTimer, TMButton5, -500
+NMB++ ;counts the MButton clicks
+Return
+TMButton5:
+IF NMB = 1
+	Send #5
+	; win + 5
 
-;~ NMB =
-;~ Return
+NMB =
+Return
 
 ^Numpad6::
 SetTimer, TMButton6, -500
@@ -155,27 +174,27 @@ IF NMB = 1
 NMB =
 Return
 
-;~ #IfWinActive ahk_exe vivaldi.exe
-;~ ^Numpad8::
-;~ SetTimer, TMButton8, -500
-;~ NMB++ ;counts the MButton clicks
-;~ Return
-;~ TMButton8:
-;~ IF NMB = 1
-	;~ Send !/
-	;~ ;Alt + /
-	;~ ; CLOSE VIVALDI TAB
-;~ IF NMB = 2
-    ;~ Send !+c
-	;~ ;Alt + Shift + c
-	;~ ; CLOSE TABS TO THE RIGHT IN VIVALDI
-;~ IF NMB = 3
-	;~ Send !-
-	;~ ;Alt + - (alt + minus)
-	;~ ; CLOSE ALL OTHER TABS IN VIVALDI
+#IfWinActive ahk_exe vivaldi.exe
+^Numpad8::
+SetTimer, TMButton8, -500
+NMB++ ;counts the MButton clicks
+Return
+TMButton8:
+IF NMB = 1
+	Send !/
+	;Alt + /
+	; CLOSE VIVALDI TAB
+IF NMB = 2
+    Send !+c
+	;Alt + Shift + c
+	; CLOSE TABS TO THE RIGHT IN VIVALDI
+IF NMB = 3
+	Send !-
+	;Alt + - (alt + minus)
+	; CLOSE ALL OTHER TABS IN VIVALDI
 
-;~ NMB =
-;~ Return
+NMB =
+Return
 
 
 !^Numpad8::
@@ -242,15 +261,14 @@ Return
 
 
 #IfWinActive
-;~ NMB =
-;~ Return
+
 
 !1::
-MouseMove, 3000,530
+MouseMove, 	leftScreenX, leftScreenY
 Return
 
 !2::
-MouseMove, 900,530
+MouseMove, middleScreenX,middleScreenY
 Return
 
 !3::
