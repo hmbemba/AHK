@@ -5,6 +5,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance Force
 Coordmode, Mouse, Screen
+SetNumLockState On
 
 
 if (A_ComputerName == "LAPTOP-UAROB6VC")
@@ -67,6 +68,8 @@ if (A_ComputerName == "TOWER2")
 
 
 ^Numpad1::
+;~ MsgBox hey
+;~ return
 SetTimer, TMButton, -500
 NMB++ ;counts the MButton clicks
 Return

@@ -67,6 +67,8 @@ if (A_ComputerName == "TOWER2")
 
 
 ^Numpad1::
+;~ MsgBox hey
+;~ return
 SetTimer, TMButton, -500
 NMB++ ;counts the MButton clicks
 Return
@@ -272,7 +274,7 @@ MouseMove, middleScreenX,middleScreenY
 Return
 
 !3::
-MouseMove, 4500,530
+MouseMove, rightScreenX, rightScreenY
 Return
 
 
