@@ -92,5 +92,5 @@ spotifyKey(key) {
 }
 
 !PrintScreen::
-run "C:\Users\Harrison\AppData\Roaming\Spotify\Spotify.exe"
+run "C:\Users\hmbem\AppData\Local\Microsoft\WindowsApps\Spotify.exe"
 return
