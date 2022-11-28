@@ -90,3 +90,7 @@ spotifyKey(key) {
 	}
 	Return
 }
+
+!PrintScreen::
+run "C:\Users\Harrison\AppData\Roaming\Spotify\Spotify.exe"
+return

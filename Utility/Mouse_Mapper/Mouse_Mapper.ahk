@@ -242,8 +242,7 @@ Return
 
 
 #IfWinActive
-NMB =
-Return
+
 
 !1::
 MouseMove, 3000,530
@@ -256,4 +255,5 @@ Return
 !3::
 MouseMove, 4500,530
 Return
+
 

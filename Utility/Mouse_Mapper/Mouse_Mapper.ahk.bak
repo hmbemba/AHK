@@ -115,18 +115,18 @@ IF NMB = 2
 NMB =
 Return
 
-#IfWinActive
-^Numpad5::
-SetTimer, TMButton5, -500
-NMB++ ;counts the MButton clicks
-Return
-TMButton5:
-IF NMB = 1
-	Send #5
-	; win + 5
+;~ #IfWinActive
+;~ ^Numpad5::
+;~ SetTimer, TMButton5, -500
+;~ NMB++ ;counts the MButton clicks
+;~ Return
+;~ TMButton5:
+;~ IF NMB = 1
+	;~ Send #5
+	;~ ; win + 5
 
-NMB =
-Return
+;~ NMB =
+;~ Return
 
 ^Numpad6::
 SetTimer, TMButton6, -500
@@ -155,27 +155,27 @@ IF NMB = 1
 NMB =
 Return
 
-#IfWinActive ahk_exe vivaldi.exe
-^Numpad8::
-SetTimer, TMButton8, -500
-NMB++ ;counts the MButton clicks
-Return
-TMButton8:
-IF NMB = 1
-	Send !/
-	;Alt + /
-	; CLOSE VIVALDI TAB
-IF NMB = 2
-    Send !+c
-	;Alt + Shift + c
-	; CLOSE TABS TO THE RIGHT IN VIVALDI
-IF NMB = 3
-	Send !-
-	;Alt + - (alt + minus)
-	; CLOSE ALL OTHER TABS IN VIVALDI
+;~ #IfWinActive ahk_exe vivaldi.exe
+;~ ^Numpad8::
+;~ SetTimer, TMButton8, -500
+;~ NMB++ ;counts the MButton clicks
+;~ Return
+;~ TMButton8:
+;~ IF NMB = 1
+	;~ Send !/
+	;~ ;Alt + /
+	;~ ; CLOSE VIVALDI TAB
+;~ IF NMB = 2
+    ;~ Send !+c
+	;~ ;Alt + Shift + c
+	;~ ; CLOSE TABS TO THE RIGHT IN VIVALDI
+;~ IF NMB = 3
+	;~ Send !-
+	;~ ;Alt + - (alt + minus)
+	;~ ; CLOSE ALL OTHER TABS IN VIVALDI
 
-NMB =
-Return
+;~ NMB =
+;~ Return
 
 
 !^Numpad8::
@@ -242,8 +242,8 @@ Return
 
 
 #IfWinActive
-NMB =
-Return
+;~ NMB =
+;~ Return
 
 !1::
 MouseMove, 3000,530
@@ -256,4 +256,5 @@ Return
 !3::
 MouseMove, 4500,530
 Return
+
 
