@@ -431,3 +431,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :c:eth::the
 :c:cretae::create
 :c:pribter::printer
+:c:adjsutment::adjustment
+:c:ight::right
+:c:highkights::highlights
+:c:abt::about
+:c:bledn::blend
+:c:thereoy::theory
+:c:btm::bottom
+:c:sahdows::shadows
+:c:statemnets::statements
