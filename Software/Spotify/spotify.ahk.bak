@@ -1,15 +1,8 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance Force
-
-; SpotifyGlobalKeys.ahk:
-; AutoHotkey script to control Spotify with global keyboard shortcuts
-; Author: James Teh <jamie@jantrid.net>
-; Copyright 2017-2018 James Teh
-; License: GNU General Public License version 2.0
-
 DetectHiddenWindows, On
 
 ; Get the HWND of the Spotify main window.
@@ -28,57 +21,28 @@ spotifyKey(key) {
 	Return
 }
 
-; Win+alt+p: Play/Pause
-#!p::
+
+playPause()
 {
 	spotifyKey("{Space}")
 	Return
 }
 
-; Win+alt+down: Next
-#!Down::
+
+nextSong()
 {
 	spotifyKey("^{Right}")
 	Return
 }
 
-; Win+alt+up: Previous
-#!Up::
+
+prevSong()
 {
 	spotifyKey("^{Left}")
 	Return
 }
 
-; Win+alt+right: Seek forward
-#!Right::
-{
-	spotifyKey("+{Right}")
-	Return
-}
-
-; Win+alt+left: Seek backward
-#!Left::
-{
-	spotifyKey("+{Left}")
-	Return
-}
-
-; shift+volumeUp: Volume up
-+Volume_Up::
-{
-	spotifyKey("^{Up}")
-	Return
-}
-
-; shift+volumeDown: Volume down
-+Volume_Down::
-{
-	spotifyKey("^{Down}")
-	Return
-}
-
-; Win+alt+o: Show Spotify
-#!o::
+showHide()
 {
 	spotifyHwnd := getSpotifyHwnd()
 	WinGet, style, Style, ahk_id %spotifyHwnd%
@@ -91,6 +55,56 @@ spotifyKey(key) {
 	Return
 }
 
-!PrintScreen::
-run "C:\Users\Harrison\AppData\Roaming\Spotify\Spotify.exe"
-return
+openSpotify()
+{
+	run "C:\Users\hmbem\AppData\Local\Microsoft\WindowsApps\Spotify.exe"
+	return
+}
+
+PrintScreen::
+SetTimer, TMButton, -500
+NMB++ ;counts the MButton clicks
+Return
+TMButton:
+IF NMB = 1
+	showHide()
+IF NMB = 2
+
+	nextSong()
+	MsgBox next
+IF NMB = 3
+    prevSong()
+NMB =
+Return
+
+ScrollLock::
+playPause()
+Return
+
+;~ ; Win+alt+right: Seek forward
+;~ #!Right::
+;~ {
+	;~ spotifyKey("+{Right}")
+	;~ Return
+;~ }
+
+;~ ; Win+alt+left: Seek backward
+;~ #!Left::
+;~ {
+	;~ spotifyKey("+{Left}")
+	;~ Return
+;~ }
+
+;~ ; shift+volumeUp: Volume up
+;~ +Volume_Up::
+;~ {
+	;~ spotifyKey("^{Up}")
+	;~ Return
+;~ }
+
+;~ ; shift+volumeDown: Volume down
+;~ +Volume_Down::
+;~ {
+	;~ spotifyKey("^{Down}")
+	;~ Return
+;~ }
