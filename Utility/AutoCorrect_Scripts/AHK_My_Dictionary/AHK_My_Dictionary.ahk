@@ -440,3 +440,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :c:btm::bottom
 :c:sahdows::shadows
 :c:statemnets::statements
+:c:selectivly::selectively
+:c:darkn::darken
+:c:dogde::dodge
+:c:setitngs::settings
