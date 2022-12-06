@@ -6,6 +6,18 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Coordmode, Mouse, Screen
 SetNumLockState On
 
+Morse(timeout = 250) {
+   ;
+   tout := timeout/1000
+   key := RegExReplace(A_ThisHotKey,"[\*\~\$\#\+\!\^]")
+   Loop {
+      t := A_TickCount
+      KeyWait %key%
+      Pattern .= A_TickCount-t > timeout
+      KeyWait %key%,DT%tout%
+      If (ErrorLevel)
+         Return Pattern
+   }}
 
 if (A_ComputerName == "LAPTOP-UAROB6VC")
 {
@@ -65,206 +77,185 @@ if (A_ComputerName == "TOWER2")
 }
 
 
-
 ^Numpad1::
-;~ MsgBox hey
-;~ return
-SetTimer, TMButton, -500
-NMB++ ;counts the MButton clicks
-Return
-TMButton:
-IF NMB = 1
-	Send #1
-Else
-    ;~ MouseMove, 900,530
-	MouseMove, %leftScreenX%, %leftScreenY%
-NMB =
+	p := Morse()
+   If (p = "0") ; tap
+   {
+      Send #1
+   }
+   Else If (p = "00") ;tap twice
+   {
+      MouseMove, %leftScreenX%, %leftScreenY%
+   }
 Return
 
 
 ^Numpad2::
-SetTimer, TMButton2, -500
-NMB++ ;counts the MButton clicks
-Return
-TMButton2:
-IF NMB = 1
-	Send #2
-IF NMB = 2
-    MouseMove, %middleScreenX%, %middleScreenY%
-IF NMB = 3
-	run %oneCommanderPath%
+	p := Morse()
+   If (p = "0") ; tap
+   {
+      Send #2
+   }
+   Else If (p = "00") ;tap twice
+   {
+      MouseMove, %middleScreenX%, %middleScreenY%
+   }
 
-NMB =
-Return
+   Else If (p = "000") ;tap 3x
+   {
+      run %oneCommanderPath%
+   }
+return
+
 
 
 ^Numpad3::
-SetTimer, TMButton3, -500
-NMB++ ;counts the MButton clicks
-Return
-TMButton3:
-IF NMB = 1
-	Send #3
-Else
-    MouseMove, %rightScreenX%, %rightScreenY%
-NMB =
+	p := Morse()
+   If (p = "0") ; tap
+   {
+      Send #3
+   }
+   Else If (p = "00") ;tap twice
+   {
+      MouseMove, %rightScreenX%, %rightScreenY%
+   }
 Return
 
 ^Numpad4::
-SetTimer, TMButton4, -500
-NMB++ ;counts the MButton clicks
-Return
-TMButton4:
-IF NMB = 1
-	Send #4
-	; win + 4
-
-NMB =
+	p := Morse()
+   If (p = "0") ; tap
+   {
+      Send #4
+   }
 Return
 
 #IfWinActive ahk_exe Obsidian.exe
 ^Numpad4::
-SetTimer, TMButton42, -500
-NMB++ ;counts the MButton clicks
-Return
-TMButton42:
-IF NMB = 1
-	Send #4
-IF NMB = 2
-    Send ^e
-
-NMB =
+	p := Morse()
+   If (p = "0") ; tap
+   {
+      Send #4
+   }
+   Else If (p = "00") ;tap twice
+   {
+      Send ^e
+   }
 Return
 
 #IfWinActive
 ^Numpad5::
-SetTimer, TMButton5, -500
-NMB++ ;counts the MButton clicks
-Return
-TMButton5:
-IF NMB = 1
-	Send #5
-	; win + 5
-
-NMB =
+	p := Morse()
+   If (p = "0") ; tap
+   {
+      Send #5
+   }
 Return
 
 ^Numpad6::
-SetTimer, TMButton6, -500
-NMB++ ;counts the MButton clicks
-Return
-TMButton6:
-IF NMB = 1
-	Send ^!{Tab}
+	p := Morse()
+   If (p = "0") ; tap
+   {
+      Send ^!{Tab}
 	; ctrl + alt + tab
-	; open application picker
-
-NMB =
+	; open built in MS application picker
+   }
 Return
 
 ^Numpad7::
-SetTimer, TMButton7, -500
-NMB++ ;counts the MButton clicks
-Return
-TMButton7:
-IF NMB = 1
-	Send ^+t
+	p := Morse()
+   If (p = "0") ; tap
+   {
+      	Send ^+t
 	;ctrl + shift + t
 	; reopens last closed tab or window
-
-
-NMB =
+   }
 Return
 
 #IfWinActive ahk_exe vivaldi.exe
 ^Numpad8::
-SetTimer, TMButton8, -500
-NMB++ ;counts the MButton clicks
+	p := Morse()
+   If (p = "0") ; tap
+   {
+		Send !/
+		;Alt + /
+		; CLOSE VIVALDI TAB
+   }
+   Else If (p = "00") ;press 2x
+   {
+		Send !+c
+		;Alt + Shift + c
+		; CLOSE TABS TO THE RIGHT IN VIVALDI
+   }
+
+   Else If (p = "000") ;press 3x
+   {
+		Send !-
+		;Alt + - (alt + minus)
+		; CLOSE ALL OTHER TABS IN VIVALDI
+   }
 Return
-TMButton8:
-IF NMB = 1
-	Send !/
-	;Alt + /
-	; CLOSE VIVALDI TAB
-IF NMB = 2
-    Send !+c
-	;Alt + Shift + c
-	; CLOSE TABS TO THE RIGHT IN VIVALDI
-IF NMB = 3
-	Send !-
-	;Alt + - (alt + minus)
-	; CLOSE ALL OTHER TABS IN VIVALDI
-
-NMB =
-Return
 
 
+;alt + num8
 !^Numpad8::
-SetTimer, TMButton8Shift2, -500
-NMB++ ;counts the MButton clicks
-Return
-TMButton8Shift2:
-IF NMB = 1
+	p := Morse()
+   If (p = "0") ; tap
+   {
 	Send !{F4}
 	; if vivaldi is open
 	; alt + 8 key will close it
-
-NMB =
+   }
 Return
 
 
 #IfWinActive
 ^Numpad8::
-SetTimer, TMButton8Shift, -500
-NMB++ ;counts the MButton clicks
-Return
-TMButton8Shift:
-IF NMB = 1
-	Send !{F4}
-	; if any window other than vivalid is open
-	; one tap on the 8 key will close it
-
-NMB =
+	p := Morse()
+   If (p = "0") ; tap
+   {
+		Send !{F4}
+		; if any window other than vivalid is open
+		; one tap on the 8 key will close it
+   }
 Return
 
-;9 is alt + space which opens terminal
+; opens terminal
+^Numpad9::
 !Space::
 run, wt.exe
 return
 
 
-
 ; Ctrl + Numpad0 is mapped to button #10 on the Mouse
 ^Numpad0::
-SetTimer, TMButton10, -500
-NMB++ ;counts the MButton clicks
-Return
-TMButton10:
-IF NMB = 1
-	Send {XButton1}
-	;MsgBox, pressed once
-	; Back Button
-IF NMB = 2
-    run, %venusPath%
-	;MsgBox, pressed twice
-IF NMB = 3
-    ;MsgBox, pressed thrice
-	Run, powershell -NoExit -Command "code ."
-NMB =
+	p := Morse()
+   If (p = "0") ; tap
+   {
+		Send {XButton1}
+		;MsgBox, pressed once
+		; Back Button
+   }
+   Else If (p = "00") ;press 2x
+   {
+		run, %venusPath%
+		;MsgBox, pressed twice
+   }
+
+   Else If (p = "000") ;press 3x
+   {
+		Run, powershell -NoExit -Command "code ."
+   }
 Return
 
 ; Ctrl + Shift + D is mapped to button #11 on the Mouse
 #IfWinActive ahk_exe FL64.exe
 ^+D::
-run, %FL_Launcher% ;"C:\Users\hmbem\Desktop\Scripts\Python\Apps\FL_VST_Launcher\main.pyw"
-
+run, %FL_Launcher%
 Return
 
 
 
 #IfWinActive
-
-
 !1::
 MouseMove, 	leftScreenX, leftScreenY
 Return
@@ -276,5 +267,7 @@ Return
 !3::
 MouseMove, rightScreenX, rightScreenY
 Return
+
+
 
 

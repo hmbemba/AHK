@@ -5,6 +5,19 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance Force
 DetectHiddenWindows, On
 
+Morse(timeout = 250) {
+   ;
+   tout := timeout/1000
+   key := RegExReplace(A_ThisHotKey,"[\*\~\$\#\+\!\^]")
+   Loop {
+      t := A_TickCount
+      KeyWait %key%
+      Pattern .= A_TickCount-t > timeout
+      KeyWait %key%,DT%tout%
+      If (ErrorLevel)
+         Return Pattern
+   }}
+
 ; Get the HWND of the Spotify main window.
 getSpotifyHwnd() {
 	WinGet, spotifyHwnd, ID, ahk_exe Spotify.exe
@@ -62,48 +75,40 @@ openSpotify()
 }
 
 PrintScreen::
-SetTimer, TMButton, -500
-NMB++ ;counts the MButton clicks
+	p := Morse()
+	If (p = "1") ; tap
+   {
+      openSpotify()
+	  ;MsgBox hold once
+	  return
+
+   }
+	If (p = "10") ; tap
+   {
+      playPause()
+	  ;MsgBox hold once tap
+	  return
+
+   }
+   If (p = "0") ; tap
+   {
+      showHide()
+	  ;MsgBox once
+	  return
+
+   }
+	If (p = "00") ; tap
+   {
+      nextSong()
+	  ;MsgBox twice
+	  return
+   }
+
+	If (p = "000") ; tap
+   {
+      prevSong()
+	  ;MsgBox thrice
+	  return
+   }
 Return
-TMButton:
-IF NMB = 1
-	showHide()
-IF NMB = 2
-	nextSong()
-	;MsgBox next
-IF NMB = 3
-    prevSong()
-NMB =
-Return
 
-ScrollLock::
-playPause()
-Return
-
-;~ ; Win+alt+right: Seek forward
-;~ #!Right::
-;~ {
-	;~ spotifyKey("+{Right}")
-	;~ Return
-;~ }
-
-;~ ; Win+alt+left: Seek backward
-;~ #!Left::
-;~ {
-	;~ spotifyKey("+{Left}")
-	;~ Return
-;~ }
-
-;~ ; shift+volumeUp: Volume up
-;~ +Volume_Up::
-;~ {
-	;~ spotifyKey("^{Up}")
-	;~ Return
-;~ }
-
-;~ ; shift+volumeDown: Volume down
-;~ +Volume_Down::
-;~ {
-	;~ spotifyKey("^{Down}")
-	;~ Return
-;~ }
