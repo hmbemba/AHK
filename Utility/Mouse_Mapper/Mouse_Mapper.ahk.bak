@@ -32,8 +32,9 @@ if (A_ComputerName == "LAPTOP-UAROB6VC")
 
 	oneCommanderPath = "C:\Users\hmbem\Desktop\OneCommander\OneCommander.exe"
 	venusPath = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\UtechSmart\Venus wireless\Venus Wireless Gaming Mouse.lnk"
-	mouseMapperPath = "C:\Users\hmbem\Desktop\Scripts\AHK\Utility\Mouse_Mapper\Mouse_Mapper.ahk"
+	;mouseMapperPath = "C:\Users\hmbem\Desktop\Scripts\AHK\Utility\Mouse_Mapper\Mouse_Mapper.ahk"
 	FL_Launcher = "C:\Users\hmbem\Desktop\Scripts\Python\Apps\FL_VST_Launcher\main.pyw"
+	vivaldiPath = "..."
 
 
 }
@@ -53,6 +54,8 @@ if (A_ComputerName == "DESKTOP-I5FROLF")
 	oneCommanderPath = "C:\Users\Harrison\Desktop\OneCommander\OneCommander.exe"
 	venusPath = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\UtechSmart\Venus wireless\Venus Wireless Gaming Mouse.lnk"
 	FL_Launcher = "C:\Users\Harrison\Desktop\Scripts\Python\Apps\FL_VST_Launcher\main.pyw"
+	vivaldiPath = "..."
+
 
 
 }
@@ -72,6 +75,8 @@ if (A_ComputerName == "TOWER2")
 	oneCommanderPath = "C:\Users\hmbem\Desktop\OneCommander\OneCommander.exe"
 	venusPath = "C:\Program Files (x86)\UtechSmart\Venus wireless\OemDrv.exe"
 	FL_Launcher = "C:\Users\hmbem\Desktop\Scripts\Python\Apps\FL_VST_Launcher\main.pyw"
+	vivaldiPath = "C:\Users\hmbem\AppData\Local\Vivaldi\Application\vivaldi.exe"
+	spotifyPath = "C:\Users\hmbem\AppData\Local\Microsoft\WindowsApps\Spotify.exe"
 
 
 }
@@ -86,6 +91,10 @@ if (A_ComputerName == "TOWER2")
    Else If (p = "00") ;tap twice
    {
       MouseMove, %leftScreenX%, %leftScreenY%
+   }
+   Else If (p = "1") ;hold
+   {
+      run %vivaldiPath%
    }
 Return
 
@@ -105,6 +114,10 @@ Return
    {
       run %oneCommanderPath%
    }
+   ;~ Else If (p = "0") ;hold
+   ;~ {
+      ;~ run %vivaldiPath%
+   ;~ }
 return
 
 
