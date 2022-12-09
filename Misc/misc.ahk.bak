@@ -1,0 +1,56 @@
+; ahk default headers
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+; #Warn  ; Enable warnings to assist with detecting common errors.
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+#SingleInstance Force
+
+Morse(timeout = 250) {
+   ;
+   tout := timeout/1000
+   key := RegExReplace(A_ThisHotKey,"[\*\~\$\#\+\!\^]")
+   Loop {
+      t := A_TickCount
+      KeyWait %key%
+      Pattern .= A_TickCount-t > timeout
+      KeyWait %key%,DT%tout%
+      If (ErrorLevel)
+         Return Pattern
+   }
+}
+
+^Left::
+Send, {Home}
+Return
+
+
+^Right::
+Send, {End}
+Return
+
+;~ # ahk
+;~ Morse(timeout = 250) {
+   ;~ ;
+   ;~ tout := timeout/1000
+   ;~ key := RegExReplace(A_ThisHotKey,"[\*\~\$\#\+\!\^]")
+   ;~ Loop {
+      ;~ t := A_TickCount
+      ;~ KeyWait %key%
+      ;~ Pattern .= A_TickCount-t > timeout
+      ;~ KeyWait %key%,DT%tout%
+      ;~ If (ErrorLevel)
+         ;~ Return Pattern
+   ;~ }
+;~ }
+
+;~ ^Numpad4::
+	;~ p := Morse()
+   ;~ If (p = "0") ; tap
+   ;~ {
+      ;~ Send #4
+   ;~ }
+   ;~ Else If (p = "00") ;tap twice
+   ;~ {
+      ;~ Send ^e
+   ;~ }
+;~ Return
