@@ -444,3 +444,4 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :c:darkn::darken
 :c:dogde::dodge
 :c:setitngs::settings
+:c:bale::able
