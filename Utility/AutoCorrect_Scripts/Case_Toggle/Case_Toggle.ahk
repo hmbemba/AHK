@@ -6,7 +6,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance Force
 
 
-+m::
++^m::
     Convert_Inv()
 RETURN
 
@@ -59,9 +59,9 @@ Convert_Inv()
     Clipboard:= Clip_Save
 }
 
-+,::goSub, set_upper_case
-+.::goSub, set_lower_case
-+/::goSub, set_title_case
++^,::goSub, set_upper_case
++^.::goSub, set_lower_case
++^/::goSub, set_title_case
 
 
 

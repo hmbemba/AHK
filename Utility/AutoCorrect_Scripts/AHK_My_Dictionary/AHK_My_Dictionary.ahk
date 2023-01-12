@@ -21,7 +21,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :c*:eafly::early
 :c*:implmeneted::implemented
 :c*:univesal::universal
-:c*:toa::to a
+:c:toa::to a
 :c*:collge::college
 :c*:tthat::that
 :c:im::I'm
@@ -205,7 +205,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :C*:databses::databases
 :C*:dtaabs::database
 
-:C*:ets::lets
+:C:ets::lets
 :C*:deletee::delete
 :C*:terminla::terminal
 :C*:asthe::as the
@@ -446,3 +446,25 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :c:setitngs::settings
 :c:bale::able
 :c:pringitng::printing
+:c:webiste::website
+:c:deisgn::design
+:c:benefeits::benefits
+:c:pwd::password
+:c:genreate::generate
+:c:emial::email
+:c:wanan::want to
+:c:customrs::customers
+:c:complimets::compliments
+:c:ofr::for
+:c:enitity::entity
+:c:interepreter::interpreter
+:c:tahst::that's
+:c:Parctices::Practices
+:c:baout::about
+:c:preapred::prepared
+:c:entertianment::entertainment
+:c:environement::environment
+:c:inocming::incoming
+:c:conider::consider
+:c:Ctaegories::Categories
+:c:acquiantance::acquaintance

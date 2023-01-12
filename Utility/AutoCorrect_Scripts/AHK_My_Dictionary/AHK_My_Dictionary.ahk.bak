@@ -149,7 +149,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :C*:interfcae::interface
 :C*:Iterfaces::Interfaces
 
-:c0:cstr::constructor
+;:c:cstr::constructor
 
 :*:soldiity::solidity
 
@@ -205,7 +205,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :C*:databses::databases
 :C*:dtaabs::database
 
-:C*:ets::lets
+:C:ets::lets
 :C*:deletee::delete
 :C*:terminla::terminal
 :C*:asthe::as the
@@ -419,3 +419,52 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :c:deisgned::designed
 :c:whathc::watch
 :c:Reources::Resources
+:c:Gneeral::General
+:c:sleected::selected
+:c:efefct::effect
+:c:docuemnt::document
+:c:sur::sure
+:c:eteh::the
+:c:th::the
+:c:hav::have
+:c:ethe::the
+:c:eth::the
+:c:cretae::create
+:c:pribter::printer
+:c:adjsutment::adjustment
+:c:ight::right
+:c:highkights::highlights
+:c:abt::about
+:c:bledn::blend
+:c:thereoy::theory
+:c:btm::bottom
+:c:sahdows::shadows
+:c:statemnets::statements
+:c:selectivly::selectively
+:c:darkn::darken
+:c:dogde::dodge
+:c:setitngs::settings
+:c:bale::able
+:c:pringitng::printing
+:c:webiste::website
+:c:deisgn::design
+:c:benefeits::benefits
+:c:pwd::password
+:c:genreate::generate
+:c:emial::email
+:c:wanan::want to
+:c:customrs::customers
+:c:complimets::compliments
+:c:ofr::for
+:c:enitity::entity
+:c:interepreter::interpreter
+:c:tahst::that's
+:c:Parctices::Practices
+:c:baout::about
+:c:preapred::prepared
+:c:entertianment::entertainment
+:c:environement::environment
+:c:inocming::incoming
+:c:conider::consider
+:c:Ctaegories::Categories
+:c:acquiantance::acquaintance
